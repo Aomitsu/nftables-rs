@@ -217,7 +217,7 @@ pub struct NAT {
     pub family: Option<NATFamily>,
     #[serde(skip_serializing_if = "Option::is_none")]
     /// Port to translate to.
-    pub port: Option<u32>,
+    pub port: Option<Expression>,
     #[serde(skip_serializing_if = "Option::is_none")]
     /// Flag(s).
     pub flags: Option<HashSet<NATFlag>>,
